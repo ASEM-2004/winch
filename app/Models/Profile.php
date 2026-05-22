@@ -8,10 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Profile extends Model
 {
     protected $fillable = ['bio', 'phone', 'user_id'];
-
-    /** relationship user */
-    public function user(): BelongsTo
-    {
+    
+    public function user():BelongsTo{
         return $this->belongsTo(User::class);
     }
 }
